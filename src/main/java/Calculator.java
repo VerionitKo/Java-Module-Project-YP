@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class Calculator {
@@ -20,6 +19,10 @@ public class Calculator {
 
     public List<String> getItems() {
         return items;
+    }
+
+    public String getTotalPrice() {
+        return String.format("%.2f",totalPrice);
     }
 
     public double getPriceForPerson() {

@@ -1,4 +1,4 @@
-public class Output {
+public class Output {                       // copyright of ninznak (aka VerionitKo (git) :)
     public static void showMessage(double personalPrice) {
 
         String[] rightEndsForRuble = {"ля", "лей", "ль"};
