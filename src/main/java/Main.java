@@ -55,6 +55,8 @@ public class Main {
             }
         }
 
+        sc.close();
+
         System.out.println("Добавленные товары: ");
 
         for (String item : calculator.getItems()) {
