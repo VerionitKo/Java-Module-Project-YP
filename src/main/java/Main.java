@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Приветствую!\n Введите количество человек" +
                 " на сколько будем делить счет. Введите значение (больше '1'): ");
 
-        while (true) {
+        while (true) {      //in separate static too
 
             try {
                 humanCount = sc.nextInt();
@@ -28,34 +28,9 @@ public class Main {
             System.out.println("!!! Число должно быть больше '1'! ");
         }
 
-        while (true) {
+        InputLoopFunctions.addingItem(sc, calculator);
 
-            System.out.println("Введите название товара (либо -> 'завершить' ): ");
-            itemName = sc.next();
-
-            if (itemName.equalsIgnoreCase("завершить")) break; else {
-                while (true) {
-                    System.out.println("Введите стоимость товара в формате ХХ,ХХ (рубли,коп.): ");
-                    try {
-                        double itemPrice = sc.nextDouble();
-                        if (itemPrice <= 0) {
-                            System.out.println("Цена должна быть положительным числом!");
-                        } else {
-                            calculator.addDish(itemName, itemPrice);
-                            System.out.println("Товар " + itemName + " успешно добавлен!");
-                            System.out.println("Сейчас общая сумма: " + calculator.getTotalPrice());
-                            break;
-                        }
-                    } catch (InputMismatchException ex) {
-                        System.out.println("Формат ввода неверный!" +
-                                " Введите дробное число через запятую!");
-                        sc.nextLine();
-                    }
-                }
-            }
-        }
-
-        sc.close();
+        //sc.close();
 
         System.out.println("Добавленные товары: ");
 
