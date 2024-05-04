@@ -26,6 +26,12 @@ public class Calculator {
     }
 
     public double getPriceForPerson() {
-        return totalPrice / humanCount;
+        double result = 0;
+        try {
+            result = totalPrice / humanCount;
+        } catch (ArithmeticException ex){
+            System.out.println("Внимание!! Деление на НОЛЬ!");
+        }
+        return result;
     }
 }
